@@ -1,0 +1,11 @@
+API = Recurso De Uma Aplicacao
+	-Metodo Http -- Post / Put / Delete / Get
+	-Path -- Netshoes / API / Pessoas
+	-Status Retorno
+		-100 - 199;
+		-200 - 299;
+		-300 - 399;
+		-400 - 499;
+		-500 - 599;
+	-Body -- Post / Put
+	-Parametros

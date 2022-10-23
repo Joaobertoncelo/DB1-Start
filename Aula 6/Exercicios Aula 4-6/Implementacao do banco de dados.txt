@@ -1,0 +1,73 @@
+CREATE DATABASE IF NOT EXISTS mer_recibo;
+USE mer_recibo;
+
+CREATE TABLE estado (
+    id    INT NOT NULL AUTO_INCREMENT,
+    uf    VARCHAR(2) NOT NULL,
+    nome    VARCHAR(50) NOT NULL,
+    PRIMARY KEY (id),
+    UNIQUE KEY (uf),
+    UNIQUE KEY (nome)
+);
+
+CREATE TABLE cidade (
+    id    INT NOT NULL AUTO_INCREMENT,
+    nome    VARCHAR(50) NOT NULL,
+    estado_id INT NOT NULL,
+    PRIMARY key(id),
+    FOREIGN KEY (estado_id) REFERENCES estado(id)
+);
+
+CREATE TABLE endereco (
+    id INT NOT NULL AUTO_INCREMENT,
+    logradouro VARCHAR(200) NOT NULL,
+    numero VARCHAR(30) NOT NULL DEFAULT 'S/N',
+    complemento VARCHAR (200),
+    cep VARCHAR(9) NOT NULL,
+    cidade_id INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (cidade_id) REFERENCES cidade(id)
+);
+
+CREATE TABLE pessoa (
+    id INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    cpf VARCHAR(14) NOT NULL,
+    PRIMARY KEY (id),
+    UNIQUE KEY (cpf)
+);
+
+CREATE TABLE pessoa_endereco (
+    id INT NOT NULL AUTO_INCREMENT,
+    pessoa_id INT NOT NULL,
+    endereco_id INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (pessoa_id) REFERENCES pessoa(id),
+    FOREIGN KEY (endereco_id) REFERENCES endereco(id)
+);
+
+CREATE TABLE usuario (
+    id INT NOT NULL AUTO_INCREMENT,
+    login VARCHAR(200) NOT NULL,
+    senha VARCHAR(200) NOT NULL,
+    tipo VARCHAR(50) NOT NULL,
+    pessoa_id INT NOT NULL,
+    PRIMARY KEY (id),
+    UNIQUE KEY (login),
+    UNIQUE KEY (pessoa_id),
+    FOREIGN KEY (pessoa_id) REFERENCES pessoa(id)
+);
+
+CREATE TABLE recibo (
+    id INT NOT NULL AUTO_INCREMENT,
+    emissor_id INT NOT NULL,
+    cliente_id INT NOT NULL,
+    descricao VARCHAR(255) NOT NULL,
+    valor DOUBLE NOT NULL,
+    data_recebimento DATE NOT NULL,
+    cidade_id INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (emissor_id) REFERENCES pessoa(id),
+    FOREIGN KEY (cliente_id) REFERENCES pessoa(id),
+    FOREIGN KEY (cidade_id) REFERENCES cidade(id)
+);

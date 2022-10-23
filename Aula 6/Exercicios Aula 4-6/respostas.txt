@@ -1,0 +1,6 @@
+3(feita pelo professor)-
+delete from estado uf where not exists(selct * from cidade cid where cid.estado_id = uf.id)
+
+13(feita pelo professor)-
+delete from pessoa where id in (select pes.id from pessoa pes...)
+

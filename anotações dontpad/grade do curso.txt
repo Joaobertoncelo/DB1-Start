@@ -1,0 +1,113 @@
+https://appear.in/db1
+
+
+- Versionamento
+
+	- GIT 
+	- GITHUB
+
+- Banco de dados
+
+	
+	- O que é banco dados
+	- Quando usar
+	- Comando DDL
+	- Comandos DML
+
+- Back-end
+	- Java - Spring Boot
+		- Sintaxe
+		- Algoritmos
+		- POO - OOP
+			- Abstração - ok 
+			- Encapsulamento - ok
+			- Herança
+			- Polimorfismo		
+		- Persistência de dados no BD com JPA - Spring Data
+		- Implementação de API Rest
+	
+- Front-end
+	- HTML, CSS, Javasript/TS
+	- Angular/Vue.js/React
+
+
+- Nuvem
+
+	- Heroku
+		- deploy do back-end
+		- deploy do front-end
+		- postgres como SaaS		
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Feedback
+	- positivos
+	- negativos
+	- construtivos
+
+Entrega de valor		 
+
+	- o que seria?						  																																																																																																																																																																
+
+
+DB1
+	- IT Service
+	- Consignet
+	- ERP
+	- AnyMarket
+	- Inovação
+
+
+Fluxo de software 
+
+
+Comercial
+	Gestor
+		- Analista de Negócio
+		- Técnico
+			- Desenvolvedor 
+			- Arquiteto
+			- Líder técnico
+
+		-  Comercial Contrato
+		- Juridico
+	
+	 - Contrato fechado
+		- Analista de negocio escreve requisitos
+		- Tecnico
+			- Dev back-end
+			- Dev front-end
+			- Arquiteto
+			- Líder tecnico
+			- Devops
+			- Banco de dados		
+			- Dev full-stack 
+			- UX
+		- Analista de teste
+			- Entende os requisitos
+				- roteiros testes
+					- regra de negócio
+					- disponibilidade da aplicação
+					- segurança
+					- acessibilidade  
+					- comportamento em navegadores
+					- comportamento em plataformas diferentes
+
+		- Para cliente faz a homologação
+
+
+- Sprint
+	
+	- SP1
+	- SP2		
+	- RD
+	
+
+- Meu Nome
+- Minha formação
+- Qual o papel de me identifiquei / pq?
+- Cidade

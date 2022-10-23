@@ -1,0 +1,214 @@
+1-
+insert into estado(nome, uf) values ('Acre', 'AC')							1
+insert into estado(nome, uf) values ('Alagoas', 'AL')							2
+insert into estado(nome, uf) values ('Amapa', 'AP')							3
+insert into estado(nome, uf) values ('Amazonas', 'AM')							4
+insert into estado(nome, uf) values ('Bahia', 'BA')							5
+insert into estado(nome, uf) values ('Ceara', 'CE')							6
+insert into estado(nome, uf) values ('Distrito Federal', 'DF')						7
+insert into estado(nome, uf) values ('Espirito Santo', 'ES')						8
+insert into estado(nome, uf) values ('Goias', 'GO')							9
+insert into estado(nome, uf) values ('Maranhao', 'MA')							10
+insert into estado(nome, uf) values ('Mato Grosso', 'MT')						11
+insert into estado(nome, uf) values ('Mato Grosso Do Sul', 'MS')					12
+insert into estado(nome, uf) values ('Minas Gerais', 'MG')						13
+insert into estado(nome, uf) values ('Para', 'PA')							14
+insert into estado(nome, uf) values ('Paraiba', 'PB')							15
+insert into estado(nome, uf) values ('Parana', 'PR')							16
+insert into estado(nome, uf) values ('Pernambuco', 'PE')						17
+insert into estado(nome, uf) values ('Piaui', 'PI')							18
+insert into estado(nome, uf) values ('Rio De Janeiro', 'RJ')						19
+insert into estado(nome, uf) values ('Rio Grande Do Norte', 'RN')					20
+insert into estado(nome, uf) values ('Rio Grande Do Sul', 'RS')						21
+insert into estado(nome, uf) values ('Rondonia', 'RO')							22
+insert into estado(nome, uf) values ('Roraima', 'RR')							23
+insert into estado(nome, uf) values ('Santa Catarina', 'SC')						24
+insert into estado(nome, uf) values ('São Paulo', 'SP')							25
+insert into estado(nome, uf) values ('Sergipe', 'SE')							26
+insert into estado(nome, uf) values ('Tocantins', 'TO')							27
+
+2-
+insert into cidade(nome,estado_id)values('Chapeco','SC')
+insert into cidade(nome,estado_id)values('Blumenau','SC')
+insert into cidade(nome,estado_id)values('joinville','SC')
+insert into cidade(nome,estado_id)values('Curitiba','PR')
+insert into cidade(nome,estado_id)values('Maringa','PR')
+insert into cidade(nome,estado_id)values('Lunardeli','PR')
+insert into cidade(nome,estado_id)values('Apucarana','PR')
+insert into cidade(nome,estado_id)values('Santa Fe','PR')
+insert into cidade(nome,estado_id)values('Sao Miguel Do Iguacu','PR')
+insert into cidade(nome,estado_id)values('Arapongas','PR')
+insert into cidade(nome,estado_id)values('Ponta Grossa','PR')
+insert into cidade(nome,estado_id)values('Jandaia Do Sul','PR')
+insert into cidade(nome,estado_id)values('Ribeirao Preto','SP')
+
+3-
+delete from estado where id = 1
+delete from estado where id = 2
+delete from estado where id = 3
+delete from estado where id = 4
+delete from estado where id = 5
+delete from estado where id = 6
+delete from estado where id = 7
+delete from estado where id = 8
+delete from estado where id = 9
+delete from estado where id = 10
+delete from estado where id = 11
+delete from estado where id = 12
+delete from estado where id = 13
+delete from estado where id = 14
+delete from estado where id = 15
+delete from estado where id = 17
+delete from estado where id = 18
+delete from estado where id = 19
+delete from estado where id = 20
+delete from estado where id = 21
+delete from estado where id = 22
+delete from estado where id = 23
+delete from estado where id = 26
+delete from estado where id = 27
+
+4-
+insert into cidade(nome,estado_id)values('Osasco',1)
+insert into cidade(nome,estado_id)values('Sao Paulo',1)
+insert into cidade(nome,estado_id)values('Guarulhos',1)
+
+5-
+update cidade set nome = Lunardelli where nome like 'Lunardel%'
+update cidade set nome = Jandaia where nome like 'Jandaia%'
+update cidade set nome = Cidade Cancao where nome like 'Maringa%'
+
+6-
+select cid.nome as nome_cidade, est.nome as nome_estado from CIDADE cid,
+estado est where cid.estado_id = est.id
+order by "nome_estado" ASC, "nome_cidade" ASC
+
+select cid.nome as nome_cidade, est.nome as nome_estado from CIDADE cid,
+estado est where cid.estado_id = est.id,
+order by "nome_cidade" ASC, "nome_estado" ASC
+
+7-
+select estado_id as estado, COUNT(*) as 'Quantidade De Cidades Cadastradas'
+FROM Cidade, estado est
+GROUP BY estado_id
+
+8-
+alter table Pessoa_Endereco
+add Tipo_Endereco VARCHAR 
+
+9-
+insert into Pessoa(nome,cpf)values('Jose Almeida','5214665215')
+insert into Pessoa(nome,cpf)values('Anderson Silva','4984516894')
+insert into Pessoa(nome,cpf)values('Maria Das Neves','79455156562')
+
+insert into endereco(Cidade_id,uf,logradouro,numero,complemento,cep)values(14,'SP','Rua Das Frutas',665,'b','654654')
+insert into endereco(Cidade_id,uf,logradouro,numero,complemento,cep)values(15,'SP','Avenida Abacaxi',332,'apto 903','321321')
+insert into endereco(Cidade_id,uf,logradouro,numero,complemento,cep)values(2,'SC','Avenida Tiradentes',998,'a','987987')
+insert into endereco(Cidade_id,uf,logradouro,numero,complemento,cep)values(14,'SP','Rua Das Laranjeiras',554,'b','789789')
+insert into endereco(Cidade_id,uf,logradouro,numero,complemento,cep)values(15,'SP','Rua Ervilhas',221,'c','456456')
+insert into endereco(Cidade_id,uf,logradouro,numero,complemento,cep)values(2,'SC','Avenida Maua',887,'apto 1893','123123')
+
+insert into pessoa_endereco(pessoa_id, endereco_id, tipo_endereco)values(1,1,'Comercial')
+insert into pessoa_endereco(pessoa_id, endereco_id, tipo_endereco)values(2,2,'Residencial')
+insert into pessoa_endereco(pessoa_id, endereco_id, tipo_endereco)values(3,3,'Residencial')
+insert into pessoa_endereco(pessoa_id, endereco_id, tipo_endereco)values(1,4,'Residencial')
+insert into pessoa_endereco(pessoa_id, endereco_id, tipo_endereco)values(2,5,'Comercial')
+insert into pessoa_endereco(pessoa_id, endereco_id, tipo_endereco)values(3,6,'Comercial')
+
+10-
+insert into Pessoa(nome,cpf)values('Ana Clara','5546555115')
+insert into Pessoa(nome,cpf)values('Joao Guilherme','326460051571')
+
+insert into endereco(Cidade_id,uf,logradouro,numero,complemento,cep)values(17,'SP','Rua Piquirini',7956,'a','963963')
+insert into endereco(Cidade_id,uf,logradouro,numero,complemento,cep)values(15,'SP','Avenida Abacaxi',4512,'apto 703','852852')
+insert into endereco(Cidade_id,uf,logradouro,numero,complemento,cep)values(17,'SP','Rua Das Frutas',1654,'casa d03','741741')
+insert into endereco(Cidade_id,uf,logradouro,numero,complemento,cep)values(15,'SP','Avenida Abacaxi',7964,'c','753753')
+
+insert into pessoa_endereco(pessoa_id, endereco_id, tipo_endereco)values(4,7,'Comercial')
+insert into pessoa_endereco(pessoa_id, endereco_id, tipo_endereco)values(4,8,'Residencial')
+insert into pessoa_endereco(pessoa_id, endereco_id, tipo_endereco)values(5,9,'Comercial')
+insert into pessoa_endereco(pessoa_id, endereco_id, tipo_endereco)values(5,10,'Residencial')
+
+11-
+insert into Pessoa(nome,cpf)values('Rafael moreira','126414129412')
+insert into Pessoa(nome,cpf)values('Paulinho da silva','01458632148')
+
+insert into endereco(Cidade_id,uf,logradouro,numero,complemento,cep)values(1,'SC','Avenida tuiuti',3297,'apto 6403','951951')
+insert into endereco(Cidade_id,uf,logradouro,numero,complemento,cep)values(2,'SC','Rua Anhanguera',6740,'apto 103','684684')
+insert into endereco(Cidade_id,uf,logradouro,numero,complemento,cep)values(3,'SC','Rua 5 de marco',7504,'casa h28','426426')
+insert into endereco(Cidade_id,uf,logradouro,numero,complemento,cep)values(2,'SC','Avenida Abobora',9645,'b','793793')
+
+insert into pessoa_endereco(pessoa_id, endereco_id, tipo_endereco)values(6,11,'Comercial')
+insert into pessoa_endereco(pessoa_id, endereco_id, tipo_endereco)values(6,12,'Residencial')
+insert into pessoa_endereco(pessoa_id, endereco_id, tipo_endereco)values(7,13,'Comercial')
+insert into pessoa_endereco(pessoa_id, endereco_id, tipo_endereco)values(7,14,'Residencial')
+
+12-
+select nome [nome], logradouro [logradouro], numero [numero], complemento [complemento], cep [cep], cid.nome [nome da cidade], uf [UF], tipo_endereco [tipo] from pessoa_endereco pes
+inner join endereco end on 
+order by "nome_estado" ASC, "nome_cidade" ASC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17-
+select rec.id as numero_recibo,
+	rec.data_recibo,
+        rec.valor,
+        cli.nome as nome_cliente,
+        uf_cli.nome as cliente_estado,
+	emi.nome as nome_emissor
+	est.nome as estado_emissor
+from recibo rec, pessoa cli, pessoa_endereco pend_cli, endereco end_cli, cidade cid_cli, estado uf_cli, pessoa emi, pessoa_endereco pend_emi, endereco end_emi, cidade cid_emi,  estado uf_emi
+		where cli.id = rec.pessoa_id 
+   		and pend_cli.pessoa_id = cli.id
+   		and pend_cli.endereco_id = end_cli.id
+   		and cid_cli.id = end_cli.cidade_id 
+   		and uf_cli.id = cid_cli.estado_id
+   		and pend_cli.tipo_endereco = 'Residencial'
+		and emi.id = rec.pessoa_id
+		and pend_cli.pessoa_id = cli.id
+   		and pend_cli.endereco_id = end_cli.id
+   		and cid_cli.id = end_cli.cidade_id 
+   		and uf_cli.id = cid_cli.estado_id
+   		and pend_cli.tipo_endereco = 'Residencial'
+		
+
+
+
+
+
+

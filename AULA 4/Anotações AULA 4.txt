@@ -1,0 +1,23 @@
+CRUD -> Create/Read/Update/Delete
+
+Comercial
+Gerente de projetos - R$ 5000,00 - 1000,00 = 7450,00/ R$ 31,00 * 40 = 1240,00
+Analista de Negócios - R$ 3500,00 - 800 = 5315,00/ R$ 22,15 * 40 = 886,00
+Desenvolvedor sênior - R$ 4500,00 - 1000,00 = 6805,00 / R$ 28,35 * 88 = 2268,00
+Desenvolvedor JR - R$ 2500,00 - 600,00 = 3825,00 / R$ 16,00 * 88 = 1280,00
+Analista de Teste - R$ 2500,00 - 600,00 = 3825,00 / R$ 16,00 * 50 = 800,00
+
+
+Custo = R$ 6474,00
+
+
+https://docs.google.com/presentation/d/17TiDvRlrAflBJJshrrJ0nzoNv1STXhZFS_zXXuavvTU/edit?usp=sharing
+
+
+
+Fazer  MER do recibo:
+
+
+https://i.pinimg.com/originals/9f/e2/b8/9fe2b8fcb0d7241c02b032680a96032d.jpg
+
+https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_in

@@ -1,0 +1,91 @@
+1-
+insert into estado(nome, uf) values ('Acre', 'AC')							1
+insert into estado(nome, uf) values ('Alagoas', 'AL')							2
+insert into estado(nome, uf) values ('Amapa', 'AP')							3
+insert into estado(nome, uf) values ('Amazonas', 'AM')							4
+insert into estado(nome, uf) values ('Bahia', 'BA')							5
+insert into estado(nome, uf) values ('Ceara', 'CE')							6
+insert into estado(nome, uf) values ('Distrito Federal', 'DF')						7
+insert into estado(nome, uf) values ('Espirito Santo', 'ES')						8
+insert into estado(nome, uf) values ('Goias', 'GO')							9
+insert into estado(nome, uf) values ('Maranhao', 'MA')							10
+insert into estado(nome, uf) values ('Mato Grosso', 'MT')						11
+insert into estado(nome, uf) values ('Mato Grosso Do Sul', 'MS')					12
+insert into estado(nome, uf) values ('Minas Gerais', 'MG')						13
+insert into estado(nome, uf) values ('Para', 'PA')							14
+insert into estado(nome, uf) values ('Paraiba', 'PB')							15
+insert into estado(nome, uf) values ('Parana', 'PR')							16
+insert into estado(nome, uf) values ('Pernambuco', 'PE')						17
+insert into estado(nome, uf) values ('Piaui', 'PI')							18
+insert into estado(nome, uf) values ('Rio De Janeiro', 'RJ')						19
+insert into estado(nome, uf) values ('Rio Grande Do Norte', 'RN')					20
+insert into estado(nome, uf) values ('Rio Grande Do Sul', 'RS')						21
+insert into estado(nome, uf) values ('Rondonia', 'RO')							22
+insert into estado(nome, uf) values ('Roraima', 'RR')							23
+insert into estado(nome, uf) values ('Santa Catarina', 'SC')						24
+insert into estado(nome, uf) values ('São Paulo', 'SP')							25
+insert into estado(nome, uf) values ('Sergipe', 'SE')							26
+insert into estado(nome, uf) values ('Tocantins', 'TO')							27
+
+2-
+insert into cidade(nome,estado_id)values('Chapeco','SC')
+insert into cidade(nome,estado_id)values('Blumenau','SC')
+insert into cidade(nome,estado_id)values('joinville','SC')
+insert into cidade(nome,estado_id)values('Curitiba','PR')
+insert into cidade(nome,estado_id)values('Maringa','PR')
+insert into cidade(nome,estado_id)values('Lunardeli','PR')
+insert into cidade(nome,estado_id)values('Apucarana','PR')
+insert into cidade(nome,estado_id)values('Santa Fe','PR')
+insert into cidade(nome,estado_id)values('Sao Miguel Do Iguacu','PR')
+insert into cidade(nome,estado_id)values('Arapongas','PR')
+insert into cidade(nome,estado_id)values('Ponta Grossa','PR')
+insert into cidade(nome,estado_id)values('Jandaia Do Sul','PR')
+insert into cidade(nome,estado_id)values('Ribeirao Preto','SP')
+
+3-
+delete from estado where id = 1
+delete from estado where id = 2
+delete from estado where id = 3
+delete from estado where id = 4
+delete from estado where id = 5
+delete from estado where id = 6
+delete from estado where id = 7
+delete from estado where id = 8
+delete from estado where id = 9
+delete from estado where id = 10
+delete from estado where id = 11
+delete from estado where id = 12
+delete from estado where id = 13
+delete from estado where id = 14
+delete from estado where id = 15
+delete from estado where id = 17
+delete from estado where id = 18
+delete from estado where id = 19
+delete from estado where id = 20
+delete from estado where id = 21
+delete from estado where id = 22
+delete from estado where id = 23
+delete from estado where id = 26
+delete from estado where id = 27
+
+4-
+insert into cidade(nome,estado_id)values('Osasco',1)
+insert into cidade(nome,estado_id)values('Sao Paulo',1)
+insert into cidade(nome,estado_id)values('Guarulhos',1)
+
+5-
+update cidade set nome = Lunardelli where nome like 'Lunardel%'
+update cidade set nome = Jandaia where nome like 'Jandaia%'
+update cidade set nome = Cidade Cancao where nome like 'Maringa%'
+
+6-
+select cid.nome as nome_cidade, est.nome as nome_estado from CIDADE cid,
+estado est where cid.estado_id = est.id
+order by "nome_estado" ASC, "nome_cidade" ASC
+
+select cid.nome as nome_cidade, est.nome as nome_estado from CIDADE cid,
+estado est where cid.estado_id = est.id,
+order by "nome_cidade" ASC, "nome_estado" ASC
+
+7-
+select ESTADO, SUM

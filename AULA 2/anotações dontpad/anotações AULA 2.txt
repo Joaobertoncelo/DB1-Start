@@ -1,0 +1,69 @@
+maiko.cunha@db1.com.br
+https://appear.in/db1
+https://git-scm.com/
+
+Versionamento
+
+- Manter histórico de alterações
+- Manter equipes de  desenvolvimento sincronizadas
+- Permite trabalhar offline e depois enviar para um repositório remoto
+
+
+GIT
+GitHUB
+GitLab
+Gitbucket
+
+
+Como trabalhar com GIT
+
+
+Pasta
+
+Comandos
+
+git init -> inicializar um
+
+git status -> status atual do repositório
+
+git add ->  para promover meu arquivo para um commit
+
+git config user.name "Maiko Cunha" -> configurar nome usuário
+
+git config user.email "maiko.cunha@db1.com.br" -> configurar e-mail do usuário
+
+git commit -m "Arquivo criado aula 1 de git" -> executar um commit
+
+git log -> mostra os logs de  commit
+
+git show <hash do commit>
+
+git diff <nome do arquivo>
+
+git blame <nome do arquivo> ->  mostra que criou/alterou cada linha
+
+git remote add origin <link>
+
+git push origin master
+
+git pull origin master
+
+git clone <url>
+
+Boa práticas
+
+- fazer commits pequenos
+- Mensagens claras e objetiva
+
+
+Exercícios:
+
+
+## Exercícios
+
+1) Crie um repositório Git local chamado exercício 1, crie um arquivo chamado "status.txt" e neste arquivo adicione o status atual de seu repositório.
+2) Execute o commit das alterações on arquivo "status.txt" e crie um arquivo chamado "logs.txt" contendo todos os logs de seu repositório local.
+3) Adicione no arquivo "status.txt" o status atual de seu repositório local e na sequência execute o commit de todos os arquivos alterados.
+4) Envie seu repositório local para o Github
+5) Crie um arquivo chamado "README.md" dentro de seu repositório na nuvem e descreva neste arquivo o conteúdo do seu repositório e os comandos necessários para alguém clonar seu repositório. Sobre arquivo README.md leia o artigo "https://www.embarcados.com.br/o-que-escrever-num-readme/" e para escrever o conteúdo utilize o guia "https://docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown"
+6) Atualize seu repositório local com o repositório remoto e adicione no arquivo "logs.txt" os novos logs de seu projeto e envie para a nuvem.

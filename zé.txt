@@ -1,0 +1,7 @@
+- Criação de java
+- Método static - método de classe
+
+- Nome.tamanho("Maiko Cunha");
+
+-Metodo de estancia
+- new Nome().tamanho("Maiko Cunha");
