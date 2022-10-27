@@ -1,0 +1,1 @@
+Nessa aula aprendemos o basico sobre como utilizar o GIT e o GITHUB, os repositórios usados estão em outra conta GITHUB e serão adicionados posteriormente;
