@@ -1,0 +1,1 @@
+Nesta aula tivemos uma introdução ao design UX, tanto sobre o que é, como é aplicado, erros e acertos comuns na área, e finalizamos com uma dinâmica com a turma toda;

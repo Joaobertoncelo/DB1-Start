@@ -1,0 +1,1 @@
+Nesta aula aprendemos como funciona o orçamento de projetos aproximadamente, calculando custos e lucro para a empresa, aprendendo assim o funcionamento da gestão de um projeto, para que seja funcional e lucrativo;
